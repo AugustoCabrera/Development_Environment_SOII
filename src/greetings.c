@@ -3,5 +3,5 @@
 
 void greetings()
 {
-    printf("Hello from another source file!\n");
+    printf("Hello from another source file!\n"); 
 }
