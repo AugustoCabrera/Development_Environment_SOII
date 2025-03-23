@@ -1,0 +1,26 @@
+Start testing: Mar 22 07:43 -03
+----------------------------------------------------------
+1/1 Testing: test_FirstProjectInCMake
+1/1 Test: test_FirstProjectInCMake
+Command: "/home/augusto/Escritorio/Tp_SOII_AugustoCabrera/TP0/setup-environment-AugustoCabrera/tests/test_FirstProjectInCMake"
+Directory: /home/augusto/Escritorio/Tp_SOII_AugustoCabrera/TP0/setup-environment-AugustoCabrera/tests
+"test_FirstProjectInCMake" start time: Mar 22 07:43 -03
+Output:
+----------------------------------------------------------
+/home/augusto/Escritorio/Tp_SOII_AugustoCabrera/TP0/setup-environment-AugustoCabrera/tests/unit/test_unit_program.c:45:test_logic_add:PASS
+/home/augusto/Escritorio/Tp_SOII_AugustoCabrera/TP0/setup-environment-AugustoCabrera/tests/unit/test_unit_program.c:46:test_logic_divide:PASS
+/home/augusto/Escritorio/Tp_SOII_AugustoCabrera/TP0/setup-environment-AugustoCabrera/tests/unit/test_unit_program.c:47:test_logic_multiply:PASS
+/home/augusto/Escritorio/Tp_SOII_AugustoCabrera/TP0/setup-environment-AugustoCabrera/tests/unit/test_unit_program.c:48:test_logic_subtract:PASS
+
+-----------------------
+4 Tests 0 Failures 0 Ignored 
+OK
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test_FirstProjectInCMake" end time: Mar 22 07:43 -03
+"test_FirstProjectInCMake" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 22 07:43 -03
