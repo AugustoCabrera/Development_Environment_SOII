@@ -1,0 +1,17 @@
+name: "Build"
+description: "Executes a compilation."
+
+#each action is defined here, the actions are bash script (console)
+
+runs:
+  using: "composite"
+  steps:
+      - name: Compile  #with a bash shell run the following commands:
+        shell: bash
+        run: |
+          SRC_FOLDER=$(pwd)/src
+
+          mkdir -p build && cd build
+          cmake -DSRC_FOLDER=${SRC_FOLDER} -DRUN_COVERAGE=1 .. && make -j2
+
+          echo "Running command: cmake -DSRC_FOLDER=${SRC_FOLDER} -GNinja -DRUN_COVERAGE=1 .. && ninja"

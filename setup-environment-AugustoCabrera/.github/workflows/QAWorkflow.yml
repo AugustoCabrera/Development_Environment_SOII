@@ -1,0 +1,36 @@
+name: QA Workflow
+
+on:
+  workflow_dispatch: #can execute at will
+  pull_request:
+    # Pull request events
+    types: [synchronize, opened, reopened, ready_for_review]
+ #pull request of what type? I synchronize, open, reopen and ready for the review.
+jobs:
+  build:
+    runs-on: ubuntu-latest  #it is built on ubuntu 22
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Install dependencies
+        uses: awalsh128/cache-apt-pkgs-action@latest #this action since it caches it, the first time it takes a long time, the others it takes VERY little time since it caches it
+        with:
+          packages: doxygen gcovr lcov cppcheck graphviz clang-format valgrind bc
+          version: 1.0
+
+      - name: Build project  
+        uses: ./.github/actions/building
+
+      - name: Run style check
+        uses: ./.github/actions/style
+
+      - name: Run documentation check
+        uses: ./.github/actions/documentation
+
+      - name: Run tests and coverage
+        uses: ./.github/actions/coverage_and_test
+        
